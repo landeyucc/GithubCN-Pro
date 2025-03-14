@@ -351,6 +351,7 @@ const allData = [
   ['Actions', '动作'],
   ['Wiki', '维基'],
   ['Copilot', 'Copilot'],
+  ['Reset all', '重置所有'],
   ['Do not share my personal information', '不要分享我的个人信息'],
   ['Accept', '接受'],
   ['Reject', '拒绝'],

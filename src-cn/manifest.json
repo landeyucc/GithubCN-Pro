@@ -1,5 +1,5 @@
 {
-  "manifest_version": 1,
+  "manifest_version": 3,
   "name": "Github网页中文",
   "short_name": "GithubCN",
   "description": "基于原项目GithubCN进行优化的一款github提供中文版界面的浏览器插件，提供新的github功能界面中文版界面。",
