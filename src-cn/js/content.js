@@ -18,6 +18,40 @@ const allData = [
   ['Help', '帮助'],
   ['Settings', '设置'],
   ['Sign out', '退出'],
+  ['Your pins have been updated. Drag and drop to reorder them.', '你的置顶项目已更新。拖动并放置以重新排序它们。'],
+  ['contributions in the last year', '最近一年的贡献'],
+  ['Contribution settings', '贡献设置'],
+  ['Private contributions', '私有贡献'],
+  ['Activity overview', '活动概览'],
+  ['Turning off private contributions will show only public activity onyour profile.', '关闭私有贡献将只显示您个人资料上的公共活动。'],
+  ['Turning on theactivity overview will show an overview of your activity across organizations and reositories.', '打开活动概览将显示您在组织和仓库中的活动概览。'],
+  ['Contribution activity', '贡献活动'],
+  ['following', '关注'],
+  ['follower', '粉丝'],
+  ['Starred', '收藏'],
+  ['Watching', '关注'],
+  ['Edit profile', '编辑个人信息'],
+  ['Commits', '提交'],
+  ['Show more activity', '显示更多活动'],
+  ['Seeing something unexpected? Take a look at the', '看到了意料之外的事情吗？请查看'],
+  ['GitHub profile guide.', 'GitHub 个人信息指南。'],
+  ['Account switcher', '切换账户'],
+  ['Search stars', '搜索收藏'],
+  ['Your Copilot', '你的 Copilot'],
+  ['Your stars', '你的收藏'],
+  ['Your gists', '你的 Gist'],
+  ['Your organizations', '你的组织'],
+  ['Your enterprises', '你的企业'],
+  ['Your sponsors', '你的赞助商'],
+  ['GitHub Website', 'GitHub 网站'],
+  ['GitHub Docs', 'GitHub 文档'],
+  ['GitHub Support', 'GitHub 支持'],
+  ['GitHub Community', 'GitHub 社区'],
+
+
+
+
+
 
   // 仓库列表相关
   ['Create', '创建'],
@@ -34,7 +68,44 @@ const allData = [
   ['Pin', '置顶'],
   ['Pin this repository to your profile', '将此仓库置顶到你的个人资料'],
   ['Popular repositories', '流行的仓库'],
-  ['Customize your pins', '定义你的置顶项目'],
+  ['Customize your pins', '定义你的置顶项目'],['Get started with GitHub Packages', '开始使用 GitHub 包'],
+  ['Safely publish packages, store your packages alongside your code, and share your packages privately with your team.', '安全地发布包，将包与您的代码一起存储，并将包与您的团队私下共享。'],
+  ['Choose a registry', '选择一个注册表'],
+  ['A default package manager used for the Java programming language and the Java runtime environment.', '用于 Java 编程语言和 Java 运行时环境的默认包管理器。'],
+  ['A free and open source package manager used for the Microsoft development platforms including .NET.', '用于 Microsoft 开发平台（包括 .NET）的免费和开源包管理器。'],
+  ['A standard format for distributing Ruby programs and libraries used for the Ruby programming language.', '用于 Ruby 编程语言的标准格式，用于分发 Ruby 程序和库。'],
+  ['A package manager for JavaScript, included with Node.js. npm makes it easy for developers to share and reuse code.', '用于 JavaScript 的包管理器，包括在 Node.js 中。npm 使开发人员能够轻松共享和重用代码。'],
+  ['A single place for your team to manage Docker images and decide who can see and access your images.', '一个可以让你的团队管理 Docker 镜像，并决定谁可以看到和访问你的镜像。'],
+  ['Create your first list', '创建你的第一个列表'],
+  ['Lists make it easier to organize and curate repositories that you have starred. Create your first list.', '列表使组织和精选收藏的仓库变得更容易。创建您的第一个列表。'],
+  ['Lists make it easier to organize and curate repositories that you have starred.', '列表使组织和精选收藏的仓库变得更容易。'],
+  ['Create your first list', '创建你的第一个列表'],
+  ['Type: All', '类型：全部'],
+  ['Type: Public', '类型：公开'],
+  ['Type: Private', '类型：私有'],
+  ['Type: Fork', '类型：分支'],
+  ['Type: Sources', '类型：源'],
+  ['Type: Can be sponsored', '类型：可以赞助'],
+  ['Type: Templates', '类型：模板'],
+  ['Type: Mirrors', '类型：镜像'],
+  ['Sources', '源'],
+  ['Forks', '分支'],
+  ['Can be sponsored', '可以赞助'],
+  ['Mirrors', '镜像'],
+  ['That’s it. You’ve reached the end of your stars.', '你已经到达了你的收藏的末尾。'],
+  ['Sort by: Recently starred', '按最近收藏排序'],
+  ['Sort by: Recently active', '按最近活跃排序'],
+  ['Sort by: Most stars', '按最多收藏排序'],
+  ['Recently starred', '最近收藏'],
+  ['Recently active', '最近活跃'],
+  ['Most stars', '最多收藏'],
+  ['Sort by', '排序'],
+  ['Name ascending (A-Z)', '名称升序（A-Z）'],
+  ['Name descending (Z-A)', '名称降序（Z-A）'],
+  ['Newest', '最新'],
+  ['Oldest', '最旧'],
+
+
 
   // 仓库操作相关
   ['Create a repository', '创建一个仓库'],
@@ -51,7 +122,43 @@ const allData = [
   ['Upload files', '上传文件'],
   ['New codespace', '新建代码空间'],
 
+
   // 仓库详情页相关
+  ['Blame', '追溯'],
+  ['History', '历史'],
+  ['Ask Copilot about this file' ,'使用Copilot询问关于这个文件'],
+  ['Raw', '原始'],
+  ['Copy raw file', '复制原始文件'],
+  ['Download raw file', '下载原始文件'],
+  ['Edit this file', '编辑这个文件'],
+  ['Edit file', '编辑文件'],
+  ['Edit in place', '立即编辑'],
+  ['Open with...', '使用...打开'],
+  ['GitHub Desktop', 'Github 桌面程序'],
+  ['Raw file content', '原始文件内容'],
+  ['Download', '下载'],
+  ['Jump to line', '跳转到行'],
+  ['Go', '转到'],
+  ['Copy path', '复制路径'],
+  ['Copy permalink', '复制永久链接'],
+  ['Ask about this file', '询问关于这个文件'],
+  ['View options', '查看选项'],
+  ['Show code folding buttons', '显示代码折叠按钮'],
+  ['Wrap lines', '换行'],
+  ['Center content', '居中内容'],
+  ['Open symbols on click', '点击打开符号'],
+  ['Delete this file', '删除这个文件'],
+  ['Delete this branch', '删除这个分支'],
+  ['Delete branch', '删除分支'],
+  ['Delete', '删除'],
+  ['Delete branch…', '删除分支...'],
+  ['Are you sure you want to delete this branch?', '你确定要删除这个分支吗？'],
+  ['Delete file', '删除文件'],
+  ['Delete file…', '删除文件...'],
+  ['Are you sure you want to delete this file?', '你确定要删除这个文件吗？'],
+  ['Delete file permanently', '永久删除文件'],
+  ['Delete file permanently…', '永久删除文件...'],
+  ['Are you sure you want to delete this file permanently?', '你确定要永久删除这个文件吗？'],
   ['Overview', '概述'],
   ['Repositories', '仓库'],
   ['Projects', '项目'],
@@ -157,16 +264,78 @@ const allData = [
   ['Your personal account', '你的个人账户'],
   ['Public profile', '公开资料'],
   ['Name', '名字'],
+  ['Pronouns', '代称'],
+  ['Don\'t specify','未指定'],
+  ['they/them', '他们'],
+  ['she/her', '她'],
+  ['he/him', '他'],
+  ['Custom', '自定义'],
+  ['Go to your personal profile', '转到你的个人资料'],
+  ['Your name may appear around GitHub where you contribute or are mentioned. You can remove it at any time.', '你的名字可能出现在 GitHub 上，你在其中贡献或被提到。你可以随时删除它。'],
+  ['Remove', '移除'],
+  ['You can manage verified email addresses in your', '你可以在这里管理你的'],
+  ['email settings', '电子邮件设置'],
   ['Change username', '修改用户名'],
   ['Account', '账户'],
   ['Export account data', '导出账户数据'],
   ['Appearance', '外观'],
+  ['Select a verified email to display', '选择一个验证过的电子邮件显示'],
   ['Accessibility', '无障碍设施'],
   ['Notifications', '通知'],
   ['Access', '访问'],
+  ['ORCID provides a persistent identifier - an ORCID iD - that distinguishes you from other researchers. Learn more at', 'ORCID 提供了一个持久的标识符 - 一个 ORCID iD - 来区分你和其他研究人员。更多信息请访问'],
+  ['ORCID.org', 'ORCID.org'],
+  ['Connect your ORCID iD', '连接你的 ORCID iD'],
+  ['Social accounts', '社交账户'],
+  ['your company’s GitHub organization to link it.', '你的公司的 GitHub 组织来链接它。'],
+  ['Other users will see the time difference from their local time.', '其他用户将看到他们本地时间与你的时间差。'],
+  ['Time zone', '时区'],
+  ['All of the fields on this page are optional and can be deleted at any time, and by filling them out, you\'re giving us consent to share this data wherever your user profile appears. Please see our', '此页面上的所有字段都是可选的，可以随时删除，填写它们意味着您同意我们在您的用户资料中共享此数据。请参阅我们的'],
+  ['privacy statement', '隐私声明'],
+  ['to learn more about how we use this information.', '以了解我们如何使用此信息。'],
+  ['Update profile', '更新资料'],
+  ['Contributions & activity', '贡献和活动'],
+  ['Make profile private and hide activity', '将个人资料设为私有并隐藏活动'],
+  ['Enabling this will hide your contributions and activity from your GitHub profile and from social features like followers, stars, feeds, leaderboards and releases.', '启用此选项将隐藏你的贡献和活动，从你的 GitHub 个人资料和社交功能中，如关注者、收藏、动态、排行榜和发布。'],
+  ['Your contribution graph, achievements, and activity overview will show your private contributions without revealing any repository or organization information.', '你的贡献图、成就和活动概览将显示你的私有贡献，而不会透露任何仓库或组织信息。'],
+  ['Read more', '了解更多'],
+  ['Update preferences', '更新偏好'],
+  ['Profile settings', '个人设置'],
+  ['Show Achievements on my profile', '在我的个人资料中显示成就'],
+  ['Your achievements will be shown on your profile.', '你的成就将显示在你的个人资料中。'],
+  ['Include private contributions on my profile', '在我的个人资料中包含私有贡献'],
+  ['GitHub Developer Program', 'GitHub 开发者计划'],
+  ['Building an application, service, or tool that integrates with GitHub?', '构建一个与 GitHub 集成的应用程序、服务或工具？'],
+  ['Join the GitHub Developer Program', '加入 GitHub 开发者计划'],
+  [', or read more about it at our', '，或者阅读更多关于它的信息，在我们的'],
+  ['GitHub developer program', 'GitHub 开发者计划'],
+  ['Jobs profile', '工作档案'],
+  ['Available for hire', '可雇佣'],
+  ['Save jobs profile', '保存工作档案'],
+  ['Trending settings', '趋势设置'],
+  ['Preferred spoken language', '首选语言'],
+  ['Chinese', '中文'],
+  ['We\'ll use this language preference to filter the trending repository lists on','我们将使用此语言偏好来过滤趋势仓库列表'],
   ['Personal billing', '个人帐单'],
+  ['our', '我们的'],
+  ['Trending Repositories', '趋势仓库'],
+  ['page.', '页面。'],
+  ['Save Trending settings', '保存趋势设置'],
   ['Emails', '邮件'],
   ['Billing and plans', '账单和计划'],
+  ['Changing your username can have', '更改用户名可能会导致'],
+  ['unintended side effects', '意想不到的错误'],
+  ['Looking to manage account security settings? You can find them in the', '想管理账户安全设置吗？你可以在'],
+  ['Link Patreon account', '链接 Patreon 账户'],
+  ['Connect a Patreon account for', '连接一个 Patreon 账户以'],
+  ['to sponsor maintainers with. Get recognition on GitHub for sponsorships made on Patreon when the sponsored person has linked Patreon and GitHub, too, and has a public GitHub Sponsors profile.', '赞助维护人员。当赞助人链接 Patreon 和 GitHub 时，他们有一个公开的 GitHub 赞助者配置文件时，在 Patreon 上进行的赞助将在 GitHub 上获得认可。'],
+  ['Connect with Patreon', '连接至 Patreon'],
+  ['Export all repositories and profile metadata for', '导出所有仓库和个人资料元数据，用户为'],
+  ['. Exports will be available for 7 days.', '。导出将在 7 天内可用。'],
+  ['Start export', '开始导出'],
+  ['Search by username, full name, or email address', '按用户名、全名或电子邮件地址搜索'],
+  ['Add Successor', '添加继承人'],
+  ['Delete your account', '删除你的账户'],
   [
     'This is a list of SSH keys associated with your account. Remove any keys that you do not recognize.',
     '这是与你的账户相关的 SSH 密钥的列表，删除任何你不认识的密钥'
@@ -309,10 +478,13 @@ const allData = [
   ['Change to private', '修改为私有'],
   ['Transfer', '转移'],
   ['Edit status', '编辑状态'],
-  ['Busy', '忙'],
+  ['Busy', '忙碌'],
   ['Clear status', '清除状态'],
   ['Never', '从不'],
+  ['When others mention you, assign you, or request your review, GitHub will let them know that you have limited availability.', '当其他人提及你，分配给你，或者请求你的审核时，GitHub 将让他们知道你有有限的可用性。'],
   ['Your main branch isn\'t protected', '你的 main 分支不是受保护的'],
+  ['How long until this status will automatically clear.', '多长时间后这个状态将自动清除。'],
+  ['What\'s happening?', '发生了什么？'],
   [
     'Protect this branch from force pushing or deletion, or require status checks before merging.',
     '保护这个分支不被强行推送或删减，或要求在合并前进行状态检查 '
@@ -339,6 +511,45 @@ const allData = [
   ['Begin import', '开始导入'],
   ['Contact', '联系支持'],
   ['Manage cookies', '管理Cookie'],
+  ['GitHub Sponsors accounts', 'GitHub 赞助商账户'],
+  ['Manage who you sponsor', '管理你赞助的人'],
+  ['You haven\'t sponsored anyone yet.', '你还没有赞助任何人。'],
+  ['Find someone to sponsor', '找到某人来赞助'],
+  ['GitHub Sponsors eligible accounts', 'GitHub 赞助商可接受的账户'],
+  ['This account has not applied to join GitHub Sponsors.', '此账户尚未申请加入 GitHub 赞助商。'],
+  ['Get sponsored', '赞助'],
+  ['Disable', '禁用'],
+  ['Enable', '启用'],
+  ['Feature preview dialog', '功能预览对话'],
+  ['Colorblind themes', '色盲主题'],
+  ['Varying by gender and geography, color blindness can affect on average 8% of men and up to 0.5% of women. Our previous colorblind theme has been split into two new themes:', '根据性别和地理区域，色盲可以影响男性平均 8% 和女性 0.5%。我们之前的色盲主题已被分为两个新主题：'],
+  ['Light/dark Protanopia & Deuteranopia for red/green color blindness.', '色盲性红/绿色的光/暗主题。'],
+  ['Light/dark Tritanopia for blue/yellow color blindness.', '色盲性蓝色/黄色的光/暗主题。'],
+  ['Command Palette', '命令面板'],
+  ['Quickly navigate and jump between your organizations or repositories and search recent issues, pull requests, projects and more with the new command palette. You can also execute time saving commands all without lifting your fingers off the keyboard!', '快速导航和跳转你的组织或仓库，搜索最近的问题，拉取请求，项目和更多使用新的命令面板。你也可以执行节省时间的命令，而无需将手指从键盘上抬起！'],
+  ['To open the command palette:', '如果要打开命令面板：'],
+  ['other', '其他'],
+  ['Documentation', '文档'],
+  ['Copilot Workspace for Pull Requests', '拉取请求的Copilot工作区'],
+  ['Copilot Workspace is a Copilot-native coding environment that helps you land high-quality pull requests faster by allowing you to edit and run code from your pull request without leaving GitHub.com.', 'Copilot Workspace 是一个 Copilot 原生的编码环境，它可以帮助你更快地通过允许你从拉取请求中编辑和运行代码而无需离开 GitHub.com 来提高代码质量。'],
+  ['Copilot Workspace is available to customers with access to the Copilot code review public preview.', 'Copilot Workspace 仅对具有访问 Copilot 代码审查公共预览版的客户可用。'],
+  ['Sign up for the Copilot code review public preview', '注册 Copilot 代码审查公共预览版'],
+  ['New Commit Details Page', '新提交详情页面'],
+  ['New version of the commit details page that lets you quickly understand and navigate the changes in a commit. Improves filtering, commenting (with new floating comments and comment counts on the file tree), keyboard navigation, and more.', '提交详情页面的新版本，让你快速了解和导航提交中的更改。改进过滤、评论（带有新的浮动评论和文件树中的评论计数）、键盘导航和更多。'],
+  ['Rich Jupyter Notebook Diffs', '丰富的 Jupyter Notebook 差异'],
+  ['Enables rich diffs of Jupyter Notebooks in pull requests', '在拉取请求中启用丰富的 Jupyter Notebook 差异'],
+  ['Note: commenting on rich diff views of notebooks is not yet supported', '注意：目前不支持对笔记本丰富差异视图的评论'],
+  ['New Issues Experience', '新问题体验'],
+  ['The new GitHub Issues experience brings three powerful new features:', '新的 GitHub 问题体验带来了三个强大的新功能：'],
+  ['Sub-issues are designed to help you break-down and manage your issues with a parent/child relationship into a hierarchy.', '子问题旨在帮助您将具有父子关系的问题分解和管理到层次结构中。'],
+  ['Issues types allow you to classify and manage your issues with a shared and consistent language across all repositories in an organization, such as bugs or tasks.', '问题类型允许您使用共享和一致的语言在组织中的所有存储库中分类和管理问题，例如错误或任务。'],
+  ['Advanced search allows you to build advanced queries using the AND and OR keywords, as well as nested queries using parentheses up to 5 layers deep right from the repository Issues page.', '高级搜索允许您使用 AND 和 OR 关键字构建高级查询，以及嵌套查询，最多可以从仓库问题页面嵌套 5 层，使用括号。'],
+  ['Slash Commands', '斜杠命令'],
+  ['Slash commands make it easier to type more complex Markdown, such as tables, tasklists, and code blocks.', '斜杠命令使编写更复杂的 Markdown 变得更容易，例如表格、任务列表和代码块。'],
+  ['Simply type', '只需输入'],
+  ['on Issues, PRs and Discussions to check out a list of available commands!', '就能在问题、拉取请求和讨论中，检查可用命令的列表！'],
+
+  
 
 
 
@@ -505,13 +716,13 @@ const allData = [
   ['Filter', '筛选'],
   ['Events', '活动'],
   ['Activity you want to see on your feed', '您希望在动态源中看到的活动'],
-  ['Stars', '星'],
-  ['main', '主干'],
+  ['Stars', 'Stars'],
+  ['main', '主要'],
   ['Default', '默认值'],
   ['Tags', '标签'],
   ['Watch', '查看'],
   ['Fork', '复刻'],
-  ['Starred', '标星'],
+  ['Starred', '已收藏'],
   ['Switch branches/tags', '查看所有分支/标签'],
   ['Profile picture', '简介图片'],
   ['SSH and GPG keys', 'SSH和GPG密钥'],
@@ -521,7 +732,7 @@ const allData = [
   // 其他
   ['Actions', '动作'],
   ['Wiki', '维基'],
-  ['Copilot', 'Copilot AI助手'],
+  ['Copilot', 'Copilot助手'],
   ['Reset all', '重置所有'],
   ['Do not share my personal information', '不要分享我的个人信息'],
   ['Manage Cookies', '管理Cookie'],
@@ -711,29 +922,44 @@ const observer = new MutationObserver(function (mutations) {
 
   // 分批处理节点
   function processNodesInBatch() {
+    // 如果待处理节点数组为空，则直接返回
     if (nodesToProcess.length === 0) return;
 
+    // 定义每批处理的节点数量
     const batchSize = 10;
+    // 从待处理节点数组中取出前10个节点
     const batch = nodesToProcess.splice(0, batchSize);
 
+    // 遍历当前批次的每个节点
     batch.forEach((node) => {
+      // 处理文本节点
       if (node.nodeType === 3) {
+        // 获取节点文本内容，去除前后空白，并将连续多个空格替换为单个空格
         let key1 = node.textContent
           .replace(/^\s*|\s*$/g, "")
           .replace(/\s+/g, " ");
+        // 如果翻译映射中存在对应的翻译，则替换节点内容
         if (dataMap.has(key1)) node.textContent = dataMap.get(key1);
-      } else {
+      } 
+      // 处理元素节点
+      else {
+        // 处理data-label属性
         let key2 = node.getAttribute("data-label");
         if (key2 && dataMap.has(key2))
           node.setAttribute("data-label", dataMap.get(key2));
+        
+        // 处理placeholder属性
         let key3 = node.getAttribute("placeholder") || "";
         if ((key3 = key3.trim())) {
           if (dataMap.has(key3))
             node.setAttribute("placeholder", dataMap.get(key3));
         }
+        
+        // 处理INPUT元素的value属性
         let key4 = node.getAttribute("value");
         if (node.tagName == "INPUT" && dataMap.has(key4)) {
           node.setAttribute("value", dataMap.get(key4));
+          // 处理INPUT元素的其他相关属性
           let key5 = node.getAttribute("data-signin-label");
           let key6 = node.getAttribute("data-disable-with");
           node.setAttribute("data-signin-label", dataMap.get(key5));
@@ -742,6 +968,7 @@ const observer = new MutationObserver(function (mutations) {
       }
     });
 
+    // 使用requestIdleCallback在浏览器空闲时继续处理剩余的节点
     requestIdleCallback(processNodesInBatch);
   }
 
