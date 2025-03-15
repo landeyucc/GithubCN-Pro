@@ -1,4 +1,8 @@
 const allData = [
+  // 使用正则表达式匹配用户名与电子邮件等变量
+  // [/Start a new repository for (\w+)/, '为 $1 创建一个新仓库'],
+  // [/([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}) is your current default email for notifications\./, '$1 是你当前用于通知的默认电子邮件。'],
+
   // 全局导航栏相关
   ['Home', '主页'],
   ['Explore', '探索'],
@@ -260,7 +264,7 @@ const allData = [
   ['Built like a spreadsheet, project tables give you a live canvas to filter, sort, and group issues and pull requests. Tailor them to your needs with custom fields and saved views.', '像电子表格一样，项目表给你一个实时的画布来过滤、排序和分组问题和合并请求。根据你的需要用自定义字段和保存的视图来定制它们。'],
 
 
-  // 个人设置相关
+  // 个人设置与订阅相关
   ['Your personal account', '你的个人账户'],
   ['Public profile', '公开资料'],
   ['Name', '名字'],
@@ -281,8 +285,458 @@ const allData = [
   ['Appearance', '外观'],
   ['Select a verified email to display', '选择一个验证过的电子邮件显示'],
   ['Accessibility', '无障碍设施'],
-  ['Notifications', '通知'],
-  ['Access', '访问'],
+  ['Character keys', '字符键'],
+  ['GitHub shortcuts', 'GitHub 快捷键'],
+  ['that don\'t use modifier keys in their activation. For example, the', '不使用修饰键激活的。例如，'],
+  ['shortcut to navigate notifications, or', '快捷键导航通知，或'],
+  ['to view context relevant shortcuts.', '查看上下文相关的快捷键。'],
+  ['Learn more about character key shortcuts', '了解更多关于字符键快捷键的信息。'],
+  ['Save keyboard shortcut preferences', '保存键盘快捷键偏好'],
+  ['Motion', '运动'],
+  ['Autoplay animated images', '自动播放动画图像'],
+  ['Select whether animated images should play automatically.', '选择是否应自动播放动画图像。'],
+  ['Adopts your system preference for reduced motion', '遵循系统偏好设置的减少运动'],
+  ['Enabled', '启用'],
+  ['Disabled', '禁用'],
+  ['Automatically plays animated images', '自动播放动画图像'],
+  ['Prevents animated images from playing automatically', '防止动画图像自动播放'],
+  ['Save motion preferences', '保存运动偏好'],
+  ['Content', '内容'],
+  ['Link underlines', '链接下划线'],
+  ['Toggle the visibility of underlines on links that are adjacent to text.', '切换链接旁边文本的下划线的可见性。'],
+  ['Hide link underlines', '隐藏链接下划线'],
+  ['Show link underlines', '显示链接下划线'],
+  ['Save content preferences', '保存内容偏好'],
+  ['Hovercards', '悬停卡片'],
+  ['Enable previewing link content via mouse hover or keyboard focus before navigation. Move focus to hovercard content using', '通过鼠标悬停或键盘焦点预览链接内容。使用'],
+  ['Save hovercard preferences', '保存悬停卡片偏好'],
+  ['Editor settings', '编辑器设置'],
+  ['URL paste behavior', 'URL 粘贴行为'],
+  ['Select if URLs should be formatted on paste. You can use', '选择是否应在粘贴时格式化 URL。你可以使用'],
+  ['to paste a link in the opposite way.', '以相反的方式粘贴链接。'],
+  ['Formatted links', '格式化链接'],
+  ['Pasting a URL while having text selected will format to a Markdown link.', '在选择文本时粘贴 URL 将格式化为 Markdown 链接。'],
+  ['Plain text', '纯文本'],
+  ['Pasting a URL while having text selected will replace the text', '在选择文本时粘贴 URL 将替换文本'],
+  ['Save editor settings', '保存编辑器偏好'],
+  ['Default notifications email', '默认通知电子邮件'],
+  ['Choose where you\'d like emails to be sent. You can add more email addresses. Use custom routes to specify different email addresses to be used for individual organizations.', '选择你希望收到电子邮件的位置。你可以添加更多电子邮件地址。使用自定义路由为不同组织指定不同的电子邮件地址。'],
+  ['Custom routing', '自定义路由'],
+  ['/ Custom Routing', '/ 自定义路由'],
+  ['You can send notifications to different', '你可以将通知发送到不同的'],
+  ['verified', '验证过的'],
+  ['email addresses depending on the organization that owns the repository.', '电子邮件地址，具体取决于拥有仓库的组织。'],
+  ['Automatically watch repositories', '自动关注仓库'],
+  ['When you\'re given push access to a repository, automatically receive notifications for it.', '当你被授予推送访问权限时，自动接收有关它的通知。'],
+  ['Automatically watch teams', '自动关注团队'],
+  ['Anytime you join a new team, you will automatically be subscribed to updates and receive notification when that team is @mentioned.', '每次你加入一个新的团队时，你将自动订阅更新并在该团队被@提到时收到通知。'],
+  ['On', '开'],
+  ['Off', '关'],
+  ['Notifications for all repositories, teams, or conversations you\'re watching.', '你关注的所有仓库、团队或对话的通知。'],
+  ['View watched repositories', '查看关注的仓库'],
+  ['Select notification channels', '选择通知渠道'],
+  ['Email', '电子邮件'],
+  ['On GitHub', '在 GitHub 上'],
+  ['on Github', '在 GitHub 上'],
+  ['on GitHub, Email', '在 GitHub 上，电子邮件'],
+  ['is your current default email for notifications.', '是你当前用于通知的默认电子邮件。'],
+  ['Participating, @mentions and custom', '参与、@提及和自定义'],
+  ['Notifications for the conversations you are participating in, or if someone cites you with an @mention. Also for all activity when subscribed to specific events.', '你参与的对话的通知，或者如果有人用@提及你。也适用于订阅特定事件时的所有活动。'],
+  ['Customize email updates', '自定义电子邮件更新'],
+  ['Choose which additional events you\'ll receive emails for when participating or watching.','选择你将在参与或关注时收到电子邮件的其他事件。'],
+  ['Add new route', '添加新路由'],
+  ['No custom routes yet.', '目前没有自定义路由。'],
+  ['Select an item', '选择一个项目'],
+  ['Search organizations', '搜索组织'],
+  ['Select Email', '选择电子邮件'],
+  ['Pick organization', '选择组织'],
+  ['Notify me:', '通知我：'],
+  ['Reviews', '审查'],
+  ['Pushes', '推送'],
+  ['Comments', '评论'],
+  ['My own updates', '我的更新'],
+  ['Reviews, Pushes', '审查，推送'],
+  ['Reviews, My own updates', '审查，我的更新'],
+  ['Pushes, My own updates', '推送，我的更新'],
+  ['Reviews, Pushes, My own updates', '审查，推送，我的更新'],
+  ['Reviews, Comments, My own updates', '审查，评论，我的更新'],
+  ['Pushes, Comments, My own updates', '推送，评论，我的更新'],
+  ['Reviews, Pushes, Comments, My own updates', '审查，推送，评论，我的更新'],
+  ['Reviews, Comments', '审查，评论'],
+  ['Pushes, Comments', '推送，评论'],
+  ['Reviews, Pushes, Comments', '审查，推送，评论'],
+  ['Dependabot alerts: New vulnerabilities', 'Dependabot 警报：新的漏洞'],
+  ['When you\'re given access to', '当你被授予访问权限时，'],
+  ['Dependabot alerts', 'Dependabot 警报'],
+  ['automatically receive notifications when a new vulnerability is found in one of your dependencies.', '发现一个新的漏洞在你的依赖项中时，自动接收通知。'],
+  ['Email weekly digest', '每周摘要电子邮件'],
+  ['Email a weekly summary summarizing alerts for up to 10 of your repositories.', '每周摘要电子邮件，总结警报最多 10 个您的存储库。'],
+  ['Don\'t send', '不要发送'],
+  ['Send weekly', '每周发送'],
+  ['Send daily', '每天发送'],
+  ['\'Deploy key\' alert email', '部署密钥警报电子邮件'],
+  ['When you are given admin permissions to an organization, automatically receive notifications when a new deploy key is added.', '当你被授予管理员权限到一个组织时，当一个新的部署密钥被添加时，则自动接收通知。'],
+  ['on GitHub, Email, CLI', '在 GitHub 上，电子邮件，CLI'],
+  ['In-product messages', '产品内消息'],
+  ['Get tips, solutions and exclusive offers from GitHub about products, services and events we think you might find interesting.', '从 GitHub 获取有关您可能感兴趣的产品、服务和事件的提示、解决方案和独家优惠。'],
+  ['Ignored repositories', '忽略的仓库'],
+  ['on GitHub, CLI', '在 GitHub 上，CLI'],
+  ['Email, CLI', '电子邮件，CLI'],
+  ['No additional events', '没有其他事件'],
+  ['You\'ll never be notified.', '你将永远不会收到通知。'],
+  ['View ignored repositories', '查看忽略的仓库'],
+  ['Billing summary', '帐单摘要'],
+  ['Your next payment', '下一次付款'],
+  ['This amount does not include the spend on usage of metered service. View your', '此金额不包括使用计量服务的消费。查看您的'],
+  ['usage this month', '本月的使用情况'],
+  ['below.', '内。'],
+  ['Payment information', '付款信息'],
+  ['Manage spending limit', '管理消费限制'],
+  ['View payment history', '查看付款历史'],
+  ['Switch to yearly billing', '切换到年度计费'],
+  ['Compare all plans', '比较所有计划'],
+  ['Current plan', '当前计划'],
+  ['The basics for all developers', '所有开发者的基础'],
+  ['GitHub Free', 'GitHub 免费计划'],
+  ['Unlimited public/private repos', '无限的公共/私有仓库'],
+  ['Unlimited collaborators', '无限的合作者'],
+  ['2,000 Actions minutes/month', '2,000 个 Actions 分钟/月'],
+  ['500MB of Packages storage', '500MB 包存储'],
+  ['120 core-hours of Codespaces compute per developer', '120 个开发者的 Codespaces 计算核心时'],
+  ['15GB of Codespaces storage per developer', '15GB 个开发者的 Codespaces 存储'],
+  ['Community support', '社区支持'],
+  ['Not included:', '不包括：'],
+  ['Free Codespaces usage per organization', '免费 Codespaces 使用情况'],
+  ['Protected branches on all repos', '所有存储库的受保护分支'],
+  ['Increase Codespaces', '增加 Codespaces'],
+  ['spend limits', '消费限制'],
+  ['Multiple reviewers in pull requests', '拉取请求中的多个审阅者'],
+  ['Required status checks', '必需的状态检查'],
+  ['Code owners', '代码所有者'],
+  ['Required reviewers', '必需的审查者'],
+  ['Pages for static website hosting', '静态网站托管的 Pages'],
+  ['Web-based support', '基于网络的支持'],
+  ['See all features and compare plans', '查看所有功能并比较计划'],
+  ['Start your first organization', '开始你的第一个组织'],
+  ['With CI/CD, Dependabot, and the world\'s largest developer community, GitHub gives your team everything they need to ship better software faster', '使用 CI/CD、Dependabot 和世界上最大的开发者社区，GitHub 为您的团队提供了一切，以便更快地交付更好的软件'],
+  ['Add-ons', '附加组件'],
+  ['Your AI pair programmer', '你的 AI 审核程序员'],
+  ['Upgrade to Copilot Pro', '升级到 Copilot Pro'],
+  ['Active subscription', '活动订阅'],
+  ['Copilot Free', 'Copilot 免费版'],
+  ['You can upgrade to Copilot Pro at any time. Check out this', '你可以随时升级到 Copilot Pro。查看这个'],
+  ['documentation', '文档'],
+  ['Usage this month', '本月使用情况'],
+  ['Get usage report', '获取使用报告'],
+  [/Included minutes quota resets in (.+) days\./, '包含的分钟配额将在 $1 天后重置。'],
+  ['See billing documentation', '查看计费文档'],
+  ['Usage minutes', '使用分钟'],
+  ['of 2,000.00 min included', ' 分钟在2,000.00 分钟内'],
+  ['for more details.', '了解更多细节。'],
+  ['monthly spending limit |', '每月消费限制 | '],
+  ['Set up a spending limit', '设置一个消费限制'],
+  [/Data transfer quota resets in (.+) days\./, '数据传输配额将在 $1 天后重置。'],
+  ['Included minutes quota only applies to Ubuntu 2-core, Windows 2-core and macOS 3-core runners. Windows 2-core and macOS 3-core runners consume included minutes at higher rates.', '包含的分钟配额仅适用于 Ubuntu 2-core、Windows 2-core 和 macOS 3-core 运行器。Windows 2-core 和 macOS 3-core 运行器以更高的速率消耗包含的分钟。'],
+  ['Included', '包含'],
+  ['Paid', '计费'],
+  ['Price / minute', '价格/分钟'],
+  ['Total', '总计'],
+  ['Price estimate / GB', '价格估计/GB'],
+  ['GB of 1.0 GB included', 'GB在1.0 GB 内'],
+  ['Data transfer out', '数据传输出'],
+  ['Storage for Actions and Packages', '用于 Actions 和 Packages 的存储'],
+  ['Shared storage consists of Actions artifacts and Packages usage. This graph shows the account\'s storage usage in GB-months. Removing stored artifacts will not reduce this number, but it will lower its rate of growth. To see your account\'s current storage, download a usage report.', '共享存储由 Actions 工件和 Packages 使用。此图表显示帐户的存储使用情况（以 GB 月为单位）。删除存储的工件不会减少此数字，但它将降低其增长速度。要查看您的帐户的当前存储，请下载使用报告。'],
+  ['Storage', '存储'],
+  ['of 0.5 GB included', ' GB在0.5 GB 内'],
+  ['Shared Storage', '共享存储'],
+  [/Included quotas reset in (.+) days\./ , '包含的配额将在 $1 天后重置。'],
+  ['Data transfer out (rounded)', '数据传输输出（四舍五入）'],
+  ['Usage hours', '使用小时'],
+  ['of 120.00 included core hours used','小时在 120.00 小时内'],
+  ['of 15.00 included GB-month used','GB在15.00 GB 内'],
+  ['Core hours are calculated by multiplying the compute types by their per-hour rates, which can vary', '核心小时数是通过将计算类型乘以每小时的费率来计算的，这可能会有所不同'],
+  ['2-core', '2 核心'],
+  ['4-core', '4 核心'],
+  ['8-core', '8 核心'],
+  ['16-core', '16 核心'],
+  ['32-core', '32 核心'],
+  ['Storage usage is updated daily and billed monthly', '存储使用情况每天更新并按月计费'],
+  ['Prebuild Storage', '预构建存储'],
+  ['Add more data', '添加更多数据'],
+  ['Git LFS Data', 'Git LFS 数据'],
+  [/Bandwidth quota resets in (.+) days\./, '带宽配额将在 $1 天后重置。'],
+  ['Bandwidth', '带宽'],
+  ['Connect with the community that builds the tools you use', '与使用你构建的工具的社区建立联系'],
+  ['You\'re currently not sponsoring anyone.', '你目前没有赞助任何人。'],
+  ['Learn more about GitHub Sponsors', '了解更多关于 GitHub 赞助者'],
+  ['Start sponsoring', '开始赞助'],
+  ['Choose a plan', '选择一个计划'],
+  ['Most popular', '最推荐的'],
+  ['Free', '免费'],
+  ['The basics for individuals', '个人的基础'],
+  ['and organizations', '与组织'],
+  ['per user/month', '每个用户/月'],
+  ['Create a free organization', '创建一个免费的组织'],
+  ['Unlimited public/private repositories', '无限的公共/私有仓库'],
+  ['Host open source projects in public GitHub repositories, accessible via web or command line. Public repositories are accessible to anyone at GitHub.com.', '在公共 GitHub 存储库中托管开源项目，可通过网络或命令行访问。公共存储库可在 GitHub.com 上的任何人访问。'],
+  ['Automatic security and version updates', '自动安全和版本更新'],
+  ['Keep projects secure by automatically opening pull requests that update vulnerable dependencies to secure versions, and update out-of-date dependencies.', '通过自动打开拉取请求来保持项目安全，以更新脆弱的依赖项到安全版本，并更新过时的依赖项。'],
+  ['2,000 CI/CD minutes/month', '2,000 个 CI/CD 分钟/月'],
+  ['Free for public repositories', '免费的公共存储库'],
+  ['Use execution minutes with GitHub Actions to automate your software development workflows. Write tasks and combine them to build, test, and deploy any code project on GitHub.', '使用 GitHub Actions 的执行分钟来自动化你的软件开发工作流程。编写任务并将它们组合在一起，以在 GitHub 上构建、测试和部署任何代码项目。'],
+  ['Host your own software packages or use them as dependencies in other projects. Both private and public hosting available.', '托管你自己的软件包或将它们用作其他项目中的依赖项。两种私有和公共托管都可用。'],
+  ['Issues & Projects', '问题和项目'],
+  ['Give your developers flexible features for project management that adapts to any team, project, and workflow — all alongside your code.', '为你的开发者提供灵活的项目管理功能，以适应任何团队、项目和工作流程 —— 与你的代码一起。'],
+  ['Get help with most of your GitHub questions and issues in our Community Forum.', '在我们的社区论坛中获取有关 GitHub 问题和问题的大部分帮助。'],
+  ['Featured add-ons', '精选附加组件'],
+  ['GitHub Copilot Access', 'GitHub Copilot 访问'],
+  ['With', '通过'],
+  [', get suggestions for whole lines or entire functions—right inside your editor.', '在您的编辑器中获取整行或整个函数的建议。'],
+  ['GitHub Codespaces Access', 'GitHub Codespaces 访问'],
+  [', get an instant dev environment in the cloud, so you can code anywhere on any device.', '在云端中获取即时开发环境，以便您可以在任何设备上进行编码。'],
+  ['Team', '团队'],
+  ['Advanced collaboration for', '为'],
+  ['individuals and organizations', '个人和组织'],
+  ['Continue with Team', '继续使用团队'],
+  ['Everything included in Free, plus...', '免费版的所有功能，加上...'],
+  ['Access to GitHub Codespaces', '访问 GitHub Codespaces'],
+  ['Blazing fast cloud developer environments with flexible compute and pre-configured containers, developers can code, collaborate, and debug from any browser. Pay only for what you use with compute fees starting at $0.18/hr and storage fees at $0.07/GB per month.', '使用灵活计算和预先配置的容器的闪电般快速的云开发环境，开发人员可以从任何浏览器进行编码、协作和调试。从每小时的 $0.18 起计算费用和每月的 $0.07/GB 存储费用开始支付。'],
+  ['Protected branches', '受保护的分支'],
+  ['Enforce restrictions on how code branches are merged, including requiring reviews by selected collaborators, or allowing only specific contributors to work on a particular branch.', '对代码分支的合并施加限制，包括要求选定的合作者进行审查，或者只允许特定的贡献者在特定分支上工作。'],
+  ['Assign multiple users or a team to review a pull request.', '将多个用户或团队分配给审查拉取请求。'],
+  ['Draft pull requests', '草稿拉取请求'],
+  ['Easily discuss and collaborate on pull requests before submitting to formal review.', '轻松讨论和协作，在提交到正式审查之前。'],
+  ['Automatically request reviews—or require approval—by selected contributors when changes are made to sections of code that they own.', '当对他们拥有的代码的部分进行更改时，自动请求审查（或要求批准）。'],
+  ['Ensure that pull requests have a specific number of approving reviews before collaborators can make changes to a protected branch.', '确保只有在受保护分支上获得批准的特定数量的审查后，合作者才能对其进行更改。'],
+  ['Pages and Wikis', 'Pages 和 Wiki'],
+  ['Host documentation and simple websites for your project in a wiki format that contributors can easily edit either on the web or command line.', '以 wiki 格式在项目中托管文档和简单网站，以便贡献者可以轻松编辑。'],
+  ['Environment deployment branches and secrets', '环境部署分支和秘密'],
+  ['A job cannot access secrets that are defined in an environment unless it is running on the specified branch.', '除非它在指定的分支上运行，否则作业无法访问在环境中定义的秘密。'],
+  ['3,000 CI/CD minutes/month', '3,000 个 CI/CD 分钟/月'],
+  ['2GB of Packages storage', '2GB 包存储'],
+  ['GitHub Support can help you troubleshoot issues you run into while using GitHub.', 'GitHub 支持可以帮助您在使用 GitHub 时解决遇到的问题。'],
+  ['Enterprise', '企业'],
+  ['Security, compliance,', '安全、合规'],
+  ['and flexible deployment', '与灵活的部署'],
+  ['Starting at', '从'],
+  ['Start a free trial', '开始免费试用'],
+  ['Contact Sales', '联系销售'],
+  ['Everything included in Team, plus...', '团队版的所有功能，加上...'],
+  ['Data residency', '数据驻留'],
+  ['GitHub Enterprise Cloud offers a multi-tenant enterprise SaaS solution on Microsoft Azure, allowing you to choose a regional cloud deployment for data residency, so your in-scope data is stored at rest in a designated location. This is available in the EU and Australia with additional regions coming soon.', 'GitHub Enterprise Cloud 提供了一个基于 Microsoft Azure 的多租户企业 SaaS 解决方案，允许您选择数据驻留的区域式云部署，以便您的范围内数据在休息时存储在指定的位置。这在欧洲和澳大利亚可用，未来将推出更多地区。'],
+  ['Contact our sales team', '联系我们的销售团队'],
+  ['to learn more.', '了解更多。'],
+  ['Enterprise Managed Users', '企业托管用户'],
+  ['Own and control the user accounts of your enterprise members through your identity provider (IdP).', '通过您的身份提供者（IdP）拥有和控制企业成员的用户帐户。'],
+  ['User provisioning through SCIM', '通过 SCIM 用户预配'],
+  ['Automatically invite members to join your organization when you grant access on your IdP. If you remove a member\'s access to your GitHub organization on your SAML IdP, the member will be automatically removed from the GitHub organization.', '当您在您的 IdP 上授予访问权限时，自动邀请成员加入您的组织。如果您在您的 SAML IdP 上删除成员对您的 GitHub 组织的访问权限，则该成员将自动从 GitHub 组织中删除。'],
+  ['Enterprise Account to centrally manage multiple organizations', '企业帐户以集中管理多个组织'],
+  ['GitHub Enterprise Cloud includes the option to create an enterprise account, which enables collaboration between multiple organizations, gives administrators a single point of visibility and management and brings license cost savings for identical users in multiple organizations.', 'GitHub Enterprise Cloud 包括创建企业帐户的选项，这使多个组织能够协作，为管理员提供单一的可见性和管理，并为多个组织中的相同用户带来许可成本节省。'],
+  ['Environment protection rules', '环境保护规则'],
+  ['When a workflow job references an environment, the job won\'t start until all of the environment\'s protection rules pass.', '当工作流程作业引用环境时，作业将不会启动，直到所有环境的保护规则都通过。'],
+  ['Repository rules', '存储库规则'],
+  ['Enforce branch and tag restrictions across your organization, ensuring branch and tag protection across your repositories. Evaluate rules to asses impact before enforcement.', '在组织中强制分支和标签限制，确保存储库中的分支和标签保护。评估规则以评估影响并强制执行。'],
+  ['Audit Log API', '审核日志 API'],
+  ['As a GitHub Enterprise Cloud organization administrator, you can now access log events using our GraphQL API and monitor the activity in your organization.', '作为 GitHub Enterprise Cloud 组织管理员，您现在可以使用我们的 GraphQL API 访问日志事件，并监控组织中的活动。'],
+  ['SOC1, SOC2, type 2 reports annually', 'SOC1、SOC2、类型 2 报告每年'],
+  ['GitHub offers AICPA System and Organization Controls (SOC) 1 Type 2 and SOC 2 Type 2 reports with IAASB International Standards on Assurance Engagements, ISAE 3000, and ISAE 3402.', 'GitHub 提供 AICPA 系统和组织控制（SOC 1 类型 2 和 SOC 2 类型 2）报告，包括 IAASB 国际标准的保证工程，ISAE 3000 和 ISAE 3402。'],
+  ['FedRAMP Tailored Authority to Operate (ATO)', '联邦信息处理标准（FIPS）认证'],
+  ['Government users can host projects on GitHub Enterprise Cloud with the confidence that our platform meets the low impact software-as-a-service (SaaS) baseline of security standards set by our U.S. federal government partners.', '政府用户可以在 GitHub Enterprise Cloud 上托管项目，以确保我们的平台符合我们与联邦政府合作伙伴设置的安全标准的低影响软件即服务（SaaS）基线。'],
+  ['SAML single sign-on', 'SAML 单点登录'],
+  ['Use an identity provider to manage the identities of GitHub users and applications.', '使用身份提供者来管理 GitHub 用户和应用程序的身份。'],
+  ['Advanced auditing', '高级审核'],
+  ['Quickly review the actions performed by members of your organization. Keep copies of audit log data to ensure secure IP and maintain compliance for your organization.', '快速查看组织成员执行的操作。保留审核日志数据的副本，以确保安全 IP 和维护组织的合规性。'],
+  ['GitHub Connect', 'GitHub Connect'],
+  ['Share features and workflows between your GitHub Enterprise Server instance and GitHub Enterprise Cloud.', '在 GitHub Enterprise Server 实例和 GitHub Enterprise Cloud 之间共享功能和工作流程。'],
+  ['50,000 CI/CD minutes/month', '50,000 个 CI/CD 分钟/月'],
+  ['50GB of Packages storage', '50GB 包存储'],
+  ['Exclusive add-ons', '独家附加组件'],
+  ['GitHub Advanced Security', 'GitHub 高级安全'],
+  ['Automatically find and fix vulnerabilities before they are put into production. Get notified if your secrets have been exposed in your codebase.', '在将它们放入生产环境之前自动查找和修复漏洞。如果您的机密在代码库中暴露，则通知您。'],
+  ['Premium support', '高级支持'],
+  ['With Premium, get a 30-minute SLA on Urgent tickets and 24/7 web and phone support via callback request. With Premium Plus, get everything in Premium, assigned Customer Reliability Engineer and more.', '使用高级支持，在紧急情况下获得 30 分钟的 SLA，通过回调请求获得 24/7 网络和电话支持。使用高级 Plus，获得 Premium 中的所有内容，分配客户可靠性工程师和更多内容。'],
+  ['Learn more about Premium Support', '了解更多关于高级支持'],
+  ['Pick a plan for your organization', '为你的组织选择一个计划'],
+  ['System', '系统'],
+  ['Notifications for workflow runs on repositories set up with','工作流程运行的通知设置为'],
+  ['GitHub Actions', 'GitHub Actions'],
+  ['Only notify for failed workflows', '仅通知失败的工作流程'],
+  ['Select events', '选择事件'],
+  ['Pull Request reviews', '拉取请求审查'],
+  ['Pull Request pushes', '拉取请求推送'],
+  ['Comments on Issues and Pull Requests', '问题和拉取请求的评论'],
+  ['Includes your own updates', '包括你的更新'],
+  ['Compare features', '比较功能'],
+  ['Code management', '代码管理'],
+  ['Public repositories', '公共存储库'],
+  ['Private repositories', '私有存储库'],
+  ['Unlimited', '无限'],
+  ['Code workflow', '代码工作流程'],
+  ['Spin up fully configured dev environments in the cloud with the power of your favorite editor. A "core hour" denotes compute usage. On a 2-core machine, you would get 60 hours free. On a 4-core machine, you would get 30 hours free, etc. Free hours are assigned to personal accounts, rather than free organizations.', '使用您最喜欢的编辑器的强大功能，在云端中启动完全配置的开发环境。“核心小时”表示计算使用情况。在一台 2 核心机器上，您将获得 60 小时的免费时间。在一台 4 核心机器上，您将获得 30 小时的免费时间，等等。免费小时分配给个人帐户，而不是免费组织。'],
+  ['$0 spend limit', '$0 消费限制'],
+  ['With policies and controls', '通过政策和控制'],
+  ['Ability to increase spend limit', '增加消费限制的能力'],
+  ['Join for free', '免费加入'],
+  ['Start Enterprise trial', '开始企业试用'],
+  ['Use execution minutes with GitHub Actions to automate your software development workflows. Write tasks and combine them to build, test, and deploy any code project on GitHub. Minutes are free for public repositories.', '使用 GitHub Actions 的执行分钟来自动化你的软件开发工作流程。编写任务并将它们组合在一起，以在 GitHub 上构建、测试和部署任何代码项目。对于公共存储库，分钟是免费的。'],
+  ['Learn more about billing', '了解更多关于计费'],
+  ['Host your own software packages or use them as dependencies in other projects. Both private and public hosting available. Packages are free for public repositories.', '托管你自己的软件包或将它们用作其他项目中的依赖项。两种私有和公共托管都可用。包对于公共存储库是免费的。'],
+  ['Review new code, see visual code changes, and confidently merge code changes with automated status checks.', '审查新代码，查看视觉代码更改，并自信地合并代码更改，使用自动状态检查。'],
+  ['Allow contributors to easily notify you of changes they\'ve pushed to a repository – with access limited to the contributors you specify. Easily merge changes you accept.', '允许贡献者轻松通知您他们已推送的更改 - 访问仅限于您指定的贡献者。轻松合并您接受的更改。'],
+  ['Automatically request reviews – or require approval – by selected contributors when changes are made to sections of code that they own.', '当对他们拥有的代码的部分进行更改时，自动请求审查（或要求批准）。'],
+  ['Multiple pull request assignees', '多个拉取请求分配'],
+  ['Assign more than one person to a pull request.', '将多个人员分配给拉取请求。'],
+  ['Repository insights', '存储库见解'],
+  ['See data about activity and contributions within your repositories, including trends. You can use this data to improve collaboration and make development faster and more effective.', '查看有关存储库中活动和贡献的信息，包括趋势。您可以使用此数据来改进协作并加快开发速度并使其更有效。'],
+  ['Scheduled reminders', '计划提醒'],
+  ['Automatic code review assignment', '自动代码审查分配'],
+  ['Code reviews', '代码审查'],
+  ['Automatically assign code reviews to members of your team based on one of two algorithms.', '根据两种算法之一自动将代码审查分配给您团队的成员。'],
+  ['Collaborators for public repositories', '公共存储库的合作者'],
+  ['Invite any GitHub member, or all GitHub members, to work with you on code in a public repository you control – including making changes and opening issues.', '邀请任何 GitHub 成员，或者所有 GitHub 成员，与您一起在您控制的公共存储库中工作 - 包括进行更改和打开问题。'],
+  ['Collaborators for private repositories', '私有存储库的合作者'],
+  ['Invite any GitHub member, or all GitHub members, to work with you on code in a private repository you control – including making changes and opening issues.', '邀请任何 GitHub 成员，或者所有 GitHub 成员，与您一起在您控制的私有存储库中工作 - 包括进行更改和打开问题。'],
+  ['Track bugs, enhancements, and other requests, prioritize work, and communicate with stakeholders as changes are proposed and merged.', '跟踪错误、增强和其他请求，优先处理工作，并在建议和合并更改时与利益相关者进行通信。'],
+  ['Visualize and manage issues and pull requests across tables, boards, and roadmaps with custom fields and views that you can arrange to suit your workflow.', '在表格、板和路线图上可视化和管理问题和拉取请求，使用自定义字段和视图，您可以根据工作流程对其进行排列。'],
+  ['Track progress on groups of issues or pull requests in a repository, and map groups to overall project goals.', '跟踪存储库中问题或拉取请求组的进度，并将组映射到整体项目目标。'],
+  ['Team discussions', '团队讨论'],
+  ['Discuss any topic, unattached to a specific project or issue. Control who has access, notify discussion participants with updates, and link from anywhere.', '讨论任何主题，不受特定项目或问题的限制。控制谁有权访问，使用更新通知讨论参与者，并从任何地方链接。'],
+  ['Organization and team management', '组织和团队管理'],
+  ['Manage access to projects on a team-by-team, or individual user, basis.', '根据团队或个人用户的基础管理团队的项目访问。'],
+  ['Pages and wikis', 'Pages 和 Wiki'],
+  ['Multiple issue assignees', '多个问题分配'],
+  ['Assign more than one person to an issue.', '将多个人员分配给问题。'],
+  [/(.+) minutes\/month/, '$1分钟/月'],
+  ['Collaboration', '协作'],
+  ['Security and compliance', '安全和合规'],
+  ['Code scanning', '代码扫描'],
+  ['Integrate automated security review into your pull requests with CodeQL. Find, prioritize, and fix vulnerabilities in your repositories without disrupting your workflow.', '使用 CodeQL 将自动安全审查集成到您的拉取请求中。在您的存储库中查找、优先处理和修复漏洞，而不会干扰您的工作流程。'],
+  ['Secret scanning', '秘密扫描'],
+  ['Detect credentials exposed in your git history, comments, or discussions. Prevent further exposures with push protection, which proactively blocks secrets from being pushed into your code.', '检测您的 git 历史记录、评论或讨论中的凭据。使用推送保护阻止机密被推送到您的代码中，从而防止进一步的暴露。'],
+  ['Dependency review', '依赖项审查'],
+  ['Understand the security impact of newly introduced dependencies during pull requests, before they get merged.', '了解在拉取请求合并之前，新引入的依赖项对安全的影响。'],
+  ['Security overview', '安全概述'],
+  ['Get a centralized view of your organization\'s security risks. Know where security features have and haven’t yet been configured.', '获取您组织的安全风险的集中视图。了解安全功能已配置和尚未配置的位置。'],
+  ['Get notified when there are new vulnerabilities affecting dependencies in your repositories.', '当有新的漏洞影响您存储库中的依赖项时，获取通知。'],
+  ['Dependabot security updates', 'Dependabot 安全更新'],
+  ['Keep projects secure by automatically opening pull requests that update vulnerable dependencies to secure versions.', '通过自动打开拉取请求来保持项目安全，以更新脆弱的依赖项到安全版本。'],
+  ['Dependabot version updates', 'Dependabot 版本更新'],
+  ['Keep projects up-to-date by automatically opening pull requests that update out-of-date dependencies.', '通过自动打开拉取请求来保持项目更新，以更新过时的依赖项。'],
+  ['Enforce branch and tag protections across repositories. Rule insights allow you to review rule enforcement and understand its impact.', '在存储库之间强制分支和标签保护。规则见解允许您查看规则强制执行及其影响。'],
+  ['Required reviews', '必需的审查'],
+  ['Ensure that all required CI tests are passing before collaborators can make changes to a protected branch.', '确保所有必需的 CI 测试都通过，才能让合作者对受保护的分支进行更改。'],
+  ['GitHub Security Advisories', 'GitHub 安全公告'],
+  ['Privately discuss, fix, and publish information about security vulnerabilities found in your repository.', '私下讨论、修复和发布关于您存储库中发现的安全漏洞的信息。'],
+  ['Enterprise Cloud', '企业云'],
+  ['Role-based access control', '基于角色的访问控制'],
+  ['Define users\' level of access to your code, data and settings.', '定义用户对您代码、数据和设置的访问级别。'],
+  ['Required 2FA', '必需的 2FA'],
+  ['Use an extra layer of security with two factor authentication (2FA) when logging into GitHub.', '使用双重身份验证（2FA）登录 GitHub 时，使用额外的安全层。'],
+  ['Audit log', '审核日志'],
+  ['Quickly review the actions performed by members of your organization.', '快速查看组织成员执行的操作。'],
+  ['Audit log API', '审核日志 API'],
+  ['Keep copies of audit log data to ensure secure IP and maintain compliance for your organization.', '保留审核日志数据的副本，以确保安全 IP 和维护组织的合规性。'],
+  ['SAML single sign-on (SSO)', 'SAML 单点登录 (SSO)'],
+  ['Access GitHub Enterprise Server using your existing accounts and centrally manage repository access.', '使用您现有的帐户访问 GitHub Enterprise Server，并集中管理存储库访问。'],
+  ['IP allow list', 'IP 允许列表'],
+  ['Limit access to known allowed IP addresses.', '限制对已知允许的 IP 地址的访问。'],
+  ['Marketplace and integrations', '市场和集成'],
+  ['Install apps that integrate directly with GitHub\'s API to improve development workflows – or build your own for private use or publication in the GitHub Marketplace.', '安装与 GitHub API 集成的应用程序，以改进开发工作流程 - 或者为私人使用或发布构建自己的应用程序在 GitHub 市场上。'],
+  ['Status checks', '状态检查'],
+  ['Define tests that GitHub automatically runs against code being committed to your repository, and get details about failures and what is causing them.', '定义 GitHub 自动针对提交到您存储库中的代码运行的测试，并获取有关失败和原因的详细信息。'],
+  ['Pre-receive hooks', '预接收挂钩'],
+  ['Create requirements for automatically accepting or rejecting a push based on the contents of the push.', '根据推送内容自动接受或拒绝推送的要求。'],
+  ['Support and deployment', '支持和部署'],
+  ['Community Support', '社区支持'],
+  ['Standard Support', '标准支持'],
+  ['GitHub Support can help you troubleshoot issues you run into while using GitHub. Get support via the web.', 'GitHub 支持可以帮助您解决在使用 GitHub 时遇到的问题。通过网络获取支持。'],
+  ['Premium and Premium Plus Support', '高级和高级 Plus 支持'],
+  ['Invoice billing', '发票计费'],
+  ['Pay bills via invoice, rather than using your credit card.', '通过发票而不是使用信用卡支付账单。'],
+  ['Self-hosted deployment', '自托管部署'],
+  ['Self-hosted GitHub for on-prem appliances or self-managed cloud tenants.', '适用于本地设备或自托管云租户的自托管 GitHub。'],
+  ['Multi-tenant enterprise SaaS solution on Microsoft Azure, allowing you to choose a regional cloud deployment for data residency, so your in-scope data is stored at rest in a designated location. This is available in the EU and Australia with additional regions coming soon.', '基于 Microsoft Azure 的多租户企业 SaaS 解决方案，允许您选择数据驻留的区域式云部署，以便您的范围内数据在休息时存储在指定的位置。这在欧洲和澳大利亚可用，未来将推出更多地区。'],
+  ['Enterprise Server', '企业服务器'],
+  ['Available', '可用'],
+  ['Available with Advanced Security', '高级安全可用'],
+  ['Compare plans', '比较计划'],
+  ['All the basics', '所有的基础'],
+  ['Advanced tools for private repos', '私人存储库的高级工具'],
+  ['GitHub organizations give you team-based access control and discussions.', 'GitHub 组织为您提供团队基于的访问控制和讨论。'],
+  ['Learn more about organizations', '了解更多关于组织'],
+  ['Enterprises can connect to advanced systems like LDAP and SAML single sign-on (SSO).', '企业可以连接到像 LDAP 和 SAML 单点登录（SSO）这样的高级系统。'],
+  ['Learn more about GitHub Enterprise', '了解更多关于 GitHub Enterprise'],
+  ['Enterprise Server customers create pre-receive hooks to automatically accept or reject a push.', 'Enterprise Server 客户创建预接收挂钩，以自动接受或拒绝推送。'],
+  ['Learn more about pre-receive hooks', '了解更多关于预接收挂钩'],
+  ['Enterprises also get Premium Support, invoice billing, and self-hosted deployment.', '企业还获得高级支持、发票计费和自托管部署。'],
+  ['Upgrade to Pro', '升级到专业版'],
+  ['Pro', '专业版'],  
+  ['180 core-hours compute/month and 20GB storage', '180 个核心时/月和 20GB 存储'],
+  ['Plans and usage', '计划和使用'],
+  ['Spending limits', '消费限制'],
+  ['Billing & plans', '计费和计划'],
+  ['/ Monthly spending limits', '/ 月度消费限制'],
+  ['Set up a monthly spending limit. You can adjust it at any time. Read more information about', '设置一个月度消费限制。您可以随时调整它。阅读更多关于'],
+  ['spending limits', '消费限制'],
+  ['Payment method is missing', '付款方式丢失'],
+  ['You can’t increase the spending limits until you set up a valid payment method.', '您无法增加消费限制，直到您设置了有效的付款方式。'],
+  ['Add payment method', '添加付款方式'],
+  ['Payment method', '付款方式'],
+
+  ['Limit spending', '限制消费'],
+  ['Set up a spending limit on a monthly basis', '按月设置消费限制'],
+  [/Leaving it at (.+) will avoid any extra expenses/, '将其设置为 $1 将避免任何额外的支出。'],
+  ['Unlimited spending', '无限消费'],
+  ['Pay as much as needed to keep Actions & Packages running', '根据需要支付以保持 Actions 和 Packages 运行'],
+  ['Email alerts', '电子邮件警报'],
+  ['Receive email notifications when usage reaches 75%, 90% and 100% thresholds.', '当使用达到 75%、90% 和 100% 的阈值时，接收电子邮件通知。'],
+  ['Included resources alerts', '包含的资源警报'],
+  ['Spending limit alerts', '消费限制警报'],
+  ['Pay as much as needed to keep Codespaces running', '根据需要支付以保持 Codespaces 运行'],
+  ['Update limit', '更新限制'],
+  ['Security', '安全'],
+  ['/ Payment information', ' / 付款信息'],
+  ['Billing information', '帐单信息'],
+  ['Add your business information to show on every invoice', '将您的业务信息添加到每个发票上显示。'],
+  ['First name', '名字'],
+  ['Last name', '姓氏'],
+  ['Company name', '公司名称'],
+  ['Address', '地址'],
+  ['(Street, P.O. box)', '(街道)'],
+  ['Address line 2', '地址行 2'],
+  ['(Apartment, suite, unit)', '(公寓、套房、单元)'],
+  ['City', '城市'],
+  ['State', '州'],
+  ['Zip', '邮编'],
+  ['Country/Region', '国家/地区'],
+  ['Choose your country', '选择您的国家/地区'],
+  ['China', '中华人民共和国'],
+  ['State/Province', '州/省'],
+  ['Postal/Zip code', '邮政编码'],
+  ['(9-digit zip code for US)', '(9 位邮政编码用于美国)'],
+  ['Required for certain countries', '某些国家需要'],
+  ['VAT/GST ID', '增值税/ GST ID'],
+  ['Save billing information', '保存帐单信息'],
+  ['Payment methods', '付款方式'],
+  ['You have not added a payment method.', '您尚未添加付款方式。'],
+  ['Add', '添加'],
+  ['Last payment', '上次付款'],
+  ['You have not made any payments.', '您尚未进行任何付款。'],
+  ['Coupon', '优惠券'],
+  ['You don\'t have an active coupon.', '您没有有效的优惠券。'],
+  ['Redeem a coupon', '兑换优惠券'],
+  ['Additional information', '附加信息'],
+  ['Add specific contact or tax information to your receipts, like your full business name, VAT/GST identification number, or address of record here. We’ll make sure it shows up on every receipt.', '在这里添加特定的联系或税务信息，如您的全名、增值税/ GST 识别号码或记录地址。我们将确保它出现在每个收据上。'],
+  ['Add information', '添加信息'],
+  ['No additional information added to your receipts.', '您的收据中没有添加任何附加信息。'],
+  ['Invoice', '发票'],
+  ['Receive an invoice for your GitHub purchases', '为您的 GitHub 购买接收发票'],
+  ['The data from Billing Information, such as your address and VAT/GST ID will appear on your invoices.', '来自账单信息的数据，例如您的地址和增值税/ GST ID 将出现在您的发票上。'],
+  ['Update your information displayed on your invoices in the', '在您的发票上显示的信息更新在'],
+  ['billing information section', '帐单信息部分'],
+  ['Automatically receive an invoice alongside the payment receipt', '自动接收付款收据 alongside 发票'],
+  ['* Enables invoices for all NEW payments.', '启用所有新付款的发票。'],
+  ['Save invoice preference', '保存发票偏好'],
   ['ORCID provides a persistent identifier - an ORCID iD - that distinguishes you from other researchers. Learn more at', 'ORCID 提供了一个持久的标识符 - 一个 ORCID iD - 来区分你和其他研究人员。更多信息请访问'],
   ['ORCID.org', 'ORCID.org'],
   ['Connect your ORCID iD', '连接你的 ORCID iD'],
@@ -340,12 +794,249 @@ const allData = [
     'This is a list of SSH keys associated with your account. Remove any keys that you do not recognize.',
     '这是与你的账户相关的 SSH 密钥的列表，删除任何你不认识的密钥'
   ],
+  ['Delete', '删除'],
+  [/Delete (.+)/,'删除$1'],
+  ['Primary', '主要'],
+  ['This email will be used for account-related notifications and can also be used for password resets.', '此电子邮件将用于账户相关的通知，也可以用于密码重置。'],
+  ['Visible in emails', '在电子邮件中可见'],
+  ['This email may be used as the \'author\' or \'committer\' address for web-based Git operations, e.g., edits and merges.', '此电子邮件可能用于基于网络的 Git 操作，例如编辑和合并的“作者”或“提交者”地址。'],
+  ['Receives notifications', '接收通知'],
+  ['This email address is the default used for GitHub notifications, i.e., replies to issues, pull requests, etc.', '此电子邮件地址是 GitHub 通知的默认地址，即对问题、拉取请求等的回复。'],
+  ['Add email address', '添加电子邮件地址'],
+  ['Email address', '电子邮件地址'],
+  ['Primary email address', '主要电子邮件地址'],
+  ['will be used for account-related notifications and can be used for password resets.', '将用于账户相关的通知，也可以用于密码重置。'],
+  ['Backup email address', '备份电子邮件地址'],
+  ['Your backup GitHub email address will be used as an additional destination for security-relevant account notifications and can also be used for password resets.', '您的备份 GitHub 电子邮件地址将用作安全相关账户通知的额外目的地，也可以用于密码重置。'],
+  ['Allow all verified emails', '允许所有已验证的电子邮件'],
+  ['Only allow primary email', '只允许主要电子邮件'],
+  ['Keep my email addresses private', '保持我的电子邮件地址私密'],
+  ['We’ll remove your public profile email and use', '我们将删除您的公共配置文件电子邮件，并使用 '],
+  ['when performing web-based Git operations (e.g. edits and merges) and sending email on your behalf. If you want command line Git operations to use your private email you must', ' 当执行基于网络的 Git 操作（例如编辑和合并）和代表您发送电子邮件时，我们将使用您的私有电子邮件。如果您想让命令行 Git 操作使用您的私有电子邮件，您必须'],
+  ['Previously authored commits associated with a public email will remain public.', '以前由公共电子邮件撰写的提交仍然将保持公共。'],
+  ['Email preferences', '电子邮件偏好'],
+  ['Subscriptions through our various marketing platforms. Each email address has its own subscriptions.', '通过我们的各种营销平台的订阅。每个电子邮件地址都有自己的订阅。'],
+  [/Subscription preferences for (.+)/, '针对 $1 的订阅偏好设置'],
+  ['To stop receiving emails for the topics below, uncheck any topics you don\'t want to receive, then click Save subscription preferences', '要停止接收以下主题的电子邮件，请取消选中您不希望接收的任何主题，然后单击保存订阅偏好'],
+  ['Manage', '管理'],
+  ['Strengthen your account by ensuring your password is strong.', '通过确保您的密码强来强化您的帐户。'],
+  ['Learn more about creating a strong password', '了解更多关于创建强密码的信息。'],
+  ['Passkeys', '安全密钥'],
+  ['passkey', '安全密钥'],
+  ['Passkeys are webauthn credentials that validate your identity using touch, facial recognition, a device password, or a PIN. They can be used as a password replacement or as a 2FA method.', '安全密钥是使用指纹、面部识别、设备密码或 PIN 验证您身份的网页端验证凭据。它们可以用作密码替换或 2FA 方法。'],
+  ['Learn more about passkeys', '了解更多关于安全密钥的信息'],
+  ['Your passkeys', '你的安全密钥'],
+  ['Add a passkey', '添加一个安全密钥'],
+  ['Added on', '添加于'],
+  ['Last used', '上次使用于'],
+  ['Because of your contributions on GitHub, two-factor authentication is required for your account. Thank you for helping keep the ecosystem safe!', '由于您在 GitHub 上的贡献，您的帐户需要进行双重身份验证。感谢您帮助保持生态系统安全！'],
+  ['Learn more about our two-factor authentication initiative', '了解更多关于我们的双重身份验证计划'],
+  ['Two-factor authentication adds an additional layer of security to your account by requiring more than just a password to sign in.', '双重身份验证通过要求除密码之外的其他内容来向您的帐户添加额外的安全层。'],
+  ['Learn more about two-factor authentication', '了解更多关于双重身份验证'],
+  ['Preferred 2FA method', '首选 2FA 方法'],
+  ['Set your preferred method to use for two-factor authentication when signing into GitHub.', '设置您在 GitHub 登录时要使用的首选方法。'],
+  ['Authenticator app', '身份验证器应用'],
+  ['GitHub Mobile', 'GitHub 移动端'],
+  ['Two-factor methods', '双重身份验证方法'],
+  ['Configured', '已配置'],
+  ['Use an authentication app or browser extension to get two-factor authentication codes when prompted.', '当提示时，使用身份验证应用程序或浏览器扩展获取双重身份验证代码。'],
+  ['Get one-time codes sent to your phone via SMS to complete authentication requests.', '通过短信将一次性代码发送到您的手机以完成身份验证请求。'],
+  ['Security keys are webauthn credentials that can only be used as a second factor of authentication.', '安全密钥是只能用作双重身份验证的网页端验证凭据。'],
+  ['GitHub Mobile can be used for two-factor authentication by installing the GitHub Mobile app and signing in to your account.', 'GitHub 移动端可以通过安装 GitHub 移动端应用程序并登录您的帐户来用于双重身份验证。'],
+  ['Show', '显示'],
+  ['Hide', '隐藏'],
+  ['Recovery options', '恢复选项'],
+  ['Your two-factor authentication recovery codes have not been downloaded or printed in the last one year. Make sure your recovery codes are up-to-date by viewing and downloading or printing them again.', '您的双重身份验证恢复代码在过去一年内没有下载或打印。请确保您的恢复代码是最新的，通过查看和再次下载或打印它们来更新它们。'],
+  ['Download recovery codes', '下载恢复代码'],
+  ['Recovery codes', '恢复代码'],
+  ['Viewed', '已查看'],
+  ['1 device', '1个设备'],
+  ['2 devices', '2个设备'],
+  ['3 devices', '3个设备'],
+  ['4 devices', '4个设备'],
+  ['5 devices', '5个设备'],
+  ['6 devices', '6个设备'],
+  ['7 devices', '7个设备'],
+  ['8 devices', '8个设备'],
+  ['9 devices', '9个设备'],
+  ['10 devices', '10个设备'],
+  ['Recovery codes can be used to access your account in the event you lose access to your device and cannot receive two-factor authentication codes.', '恢复代码可以在您失去对您的设备的访问权限并且无法接收双重身份验证代码的情况下使用来访问您的帐户。'],
+  ['View', '查看'],
+  ['Security keys', '安全密钥'],
+  ['SMS/Text message', '短信/文本消息'],
+  ['Security keys', '安全密钥'],
+  ['Seen from this browser', '从这个浏览器中看到'],
+  ['Synced', '同步'],
+  ['Authentication code', '身份验证代码'],
+  ['Open your two-factor authenticator (TOTP) app or browser extension to view your authentication code.', '打开您的双重身份验证应用程序（TOTP）或浏览器扩展以查看您的身份验证代码。'],
+  ['Having problems?', '遇到问题？'],
+  ['Use your passkey', '使用您的安全密钥'],
+  ['Use GitHub Mobile', '使用 GitHub 移动端'],
+  ['Use your password', '使用您的密码'],
+  ['Verify', '验证'],
+  ['Make sure it\'s at least 15 characters OR at least 8 characters including a number and a lowercase letter.', '确保它至少为 15 个字符或至少为 8 个字符，包括一个数字和一个小写字母。'],
+  ['Update password', '更新密码'],
+  ['Tip:', '提示：'],
+  ['You are entering', '您正在输入'],
+  ['sudo mode', 'sudo 模式'],
+  ['. After you\'ve performed a sudo-protected action, you\'ll only be asked to re-authenticate again after a few hours of inactivity.', '。在您执行了一个受保护的 sudo 操作后，您将仅在几小时的不活动后再次要求重新进行身份验证。'],
+  ['Register new security key', '注册新的安全密钥'],
+  ['I forgot my password', '我忘记了我的密码'],
+  ['Edit passkey nickname', '编辑安全密钥昵称'],
+  ['General info and offers from GitHub', 'GitHub 的一般信息和优惠'],
+  ['Unsubscribe from all topics', '取消订阅所有主题'],
+  ['Save subscription preferences', '保存订阅偏好'],
+  ['Back to email settings', '返回电子邮件设置'],
+  ['set your email in Git', '在 Git 中设置你的电子邮件'],
   ['Organizations', '组织'],
   ['You are not a member of any organizations.', '你不是任何组织的成员  '],
   ['Archives', '归档'],
   ['Security log', '安全日志'],
   ['Sponsorship log', '赞助日志'],
   ['No sponsorship activity in this time period', '这段时间内没有赞助活动'],
+  ['Sessions', '会话'],
+  ['Web sessions', 'Web 会话'],
+  ['This is a list of devices that have logged into your account. Revoke any sessions that you do not recognize.', '这是您帐户的设备列表。撤销您不认识的任何会话。'],
+  ['View all sessions', '查看所有会话'],
+  ['GitHub Mobile sessions', 'GitHub 移动端会话'],
+  ['This is a list of devices that have logged into your account via the GitHub Mobile app. Revoke any session that you do not recognize or you can', '这是您帐户通过 GitHub 移动端应用程序登录的设备列表。撤销您不认识的任何会话或您可以'],
+  ['revoke', '撤销'],
+  ['Revoke', '撤销'],
+  ['your GitHub Mobile app authorization to sign out of all your devices.', '您的 GitHub 移动端应用程序授权以从所有设备注销。'],
+  ['SSH keys', 'SSH 密钥'],
+  ['New SSH key', '新增 SSH 密钥'],
+  ['There are no SSH keys associated with your account.', '没有与您的帐户关联的 SSH 密钥。'],
+  ['Check out our guide to', '了解有关'],
+  ['connecting to GitHub using SSH keys', '使用 SSH 密钥连接到 GitHub 的指南'],
+  ['or troubleshoot', '或排查'],
+  ['common SSH problems', '常见的 SSH 问题'],
+  ['GPG keys', 'GPG 密钥'],
+  ['There are no GPG keys associated with your account.', '没有与您的帐户关联的 GPG 密钥。'],
+  ['Learn how to', '了解如何'],
+  ['generate a GPG key and add it to your account', '生成 GPG 密钥并将其添加到您的帐户'],
+  ['New GPG key', '新增 GPG 密钥'],
+  ['Vigilant mode', ' 警戒模式'],
+  ['Flag unsigned commits as unverified', '将未签名的提交标记为未验证'],
+  ['This will include any commit attributed to your account but not signed with your GPG or S/MIME key.', '这将包括任何归因于您帐户的提交，但未使用您的 GPG 或 S/MIME 密钥签名。'],
+  ['Note that this will include your existing unsigned commits.', '请注意，这将包括您现有的未签名提交。'],
+  ['Learn about vigilant mode', '了解警戒模式'],
+  ['Transform account', '转换帐户'],
+  [/Turn (.+) into an organization/, '将 $1 转换为组织'],
+  ['Enterprises', '企业'],
+  ['You don\'t have any enterprises.', '您没有任何企业。'],
+  ['Designed for businesses or teams who collaborate on GitHub.com', '专为在 GitHub.com 上合作的业务或团队设计'],
+  ['Start free for 30 days', '免费开始使用 30 天'],
+  ['Learn more about enterprises', '了解更多关于企业'],
+  ['Moderation', '审核'],
+  ['Blocked users', '被阻止的用户'],
+  ['Interaction limits', '交互限制'],
+  ['Code review limits', '代码审查限制'],
+  ['Block a user', '阻止用户'],
+  ['Blocking a user prevents the following on all your repositories:', '阻止用户将以下内容阻止在所有您的存储库上：'],
+  ['opening or commenting on issues or pull requests', '打开或评论问题或拉取请求'],
+  ['starring, forking, or watching', '收藏、分支或观看'],
+  ['adding or editing wiki pages', '添加或编辑维基页面'],
+  ['Additionally, blocked users are not able to:', '此外，被阻止的用户无法：'],
+  ['invite you as a collaborator to their repositories', '将您邀请为他们存储库的协作者'],
+  ['follow your account’s public activity', '关注您帐户的公共活动'],
+  ['send you notifications by @mentioning your username in public repositories', '在公共存储库中提及您的用户名以向您发送通知'],
+  ['Learn more about blocking a user', '了解更多关于阻止用户'],
+  ['Search by username, full name or email address', '按用户名、全名或电子邮件地址搜索'],
+  ['You have not blocked any users.', '您尚未阻止任何用户。'],
+  ['Block user', '阻止用户'],
+  ['Warn me when a blocked user is a prior contributor to a repository', '当被阻止的用户是存储库的先前贡献者时，警告我'],
+  ['On repositories you haven’t contributed to yet, we’ll warn you when a user you’ve blocked has previously made contributions.', '在您尚未贡献的存储库中，我们将在您已阻止的用户之前做出贡献时警告您。'],
+  ['New users', '新用户'],
+  ['Temporary interaction limits', '临时交互限制'],
+  ['Temporarily restrict which external users can interact with your repositories (comment, open issues, or create pull requests) for a configurable period of time.', '暂时限制哪些外部用户可以与您的存储库进行交互（评论、打开问题或创建拉取请求），并在可配置的时间段内。'],
+  ['This may be used to force a "cool-down" period during heated discussions or prevent unwanted interactions.', '这可能用于在激烈讨论期间强制“冷却”期间，或防止不希望的交互。'],
+  ['Interaction limits may already exist in your account\'s', '交互限制可能已经存在于您帐户的'],
+  ['public repositories', '公共存储库'],
+  ['. Any changes here will override those limits.', '。这里的任何更改都将覆盖这些限制。'],
+  ['Limit to existing users', '限制到现有用户'],
+  ['Users that have recently created their account will be unable to interact with your repositories.', '最近创建帐户的用户将无法与您的存储库进行交互。'],
+  ['Limit to prior contributors', '限制到先前贡献者'],
+  ['Users that have not previously committed to the default branch of one of your repositories will be unable to interact with that repository.', '尚未在您的存储库之一的默认分支中提交的用户将无法与该存储库进行交互。'],
+  ['Limit to repository collaborators', '限制到存储库协作者'],
+  ['Users that are not collaborators of one of your repositories will not be able to interact with that repository.', '不是您存储库之一的协作者的用户将无法与该存储库进行交互。'],
+  ['Restrict users who are permitted to approve or request changes on pull requests in your public repositories.', '限制允许批准或请求更改的拉取请求的用户在您的公共存储库中。'],
+  ['Code review limits may already be specified by individual repositories. Any changes here will override those limits until unset.', '代码审查限制可能已经由单个存储库指定。这里的任何更改都将覆盖这些限制，直到取消设置。'],
+  ['Code review limits are currently managed individually for all repositories. Enable limits to permit only users who have explicitly been granted access to each repository to submit reviews that "approve" or "request changes". Remove limits to allow all users to submit pull request reviews. All users able to submit comment pull request reviews will continue to be able to do so.', '代码审查限制目前是为所有存储库单独管理的。启用限制以允许仅授予对每个存储库的访问权限的用户提交“批准”或“请求更改”的拉取请求审查。删除限制以允许所有用户提交拉取请求审查。所有能够提交评论拉取请求审查的用户将继续能够这样做。'],
+  ['Limit reviews on all repositories', '限制所有存储库的审查'],
+  ['Remove review limits from all repositories', '从所有存储库中删除审查限制'],
+  ['Unset', '取消设置'],
+  ['Code, planning, and automation', '代码、规划和自动化'],
+  ['Access', '访问'],
+  ['Repository default branch', '存储库默认分支'],
+  ['Choose the default branch for your new personal repositories. You might want to change the default name due to different workflows, or because your integrations still require “master” as the default branch name. You can always change the default branch name on individual repositories.', '选择您新个人存储库的默认分支。您可能希望更改默认名称，因为不同的工作流程，或者因为您的集成仍然需要“主”作为默认分支名称。您可以随时在单个存储库上更改默认分支名称。'],
+  ['Learn more about default branches', '了解更多关于默认分支'],
+  ['Update', '更新'],
+  ['Deleted repositories', '已删除的存储库'],
+  ['It may take up to an hour for repositories to be displayed here. You can only restore repositories that are not forks, or have not been forked.', '这里显示存储库可能需要几小时。您只能恢复尚未分支或已分支的存储库。'],
+  ['Learn more about restoring deleted repositories', '了解更多关于恢复已删除的存储库'],
+  [/Deleted last week by (.+)/,'上周由 $1 删除'],
+  [/Deleted last month by (.+)/,'上个月由 $1 删除'],
+  ['Restore', '恢复'],
+  ['These repositories were deleted, but can\'t be restored by you. Contact support if you want to restore them.', '这些存储库已删除，但您无法恢复它们。如果您想恢复它们，请联系支持。'],
+  ['Leave', '离开'],
+  ['Automatically install dotfiles', '自动安装 dotfiles'],
+  ['Codespaces can automatically install your dotfiles into every codespace you create.', 'Codespaces 可以自动将您的 dotfiles 安装到您创建的每个 codespace 中。'],
+  ['Learn how to set up your dotfiles for Codespaces', '了解如何为 Codespaces 设置 dotfiles'],
+  ['Secrets', '秘密'],
+  ['Codespace user secrets', 'Codespace 用户秘密'],
+  ['Development environment secrets are environment variables that are encrypted. They are available to any codespace you create using repositories with access to that secret.', '开发环境秘密是加密的环境变量。它们可用于使用具有该秘密访问权限的存储库创建的任何 codespace。'],
+  ['There are no Codespace secrets.', '没有 Codespace 秘密。'],
+  ['New secret', '新建秘密'],
+  ['GPG verification', 'GPG 验证'],
+  ['Codespaces can have GPG commit signing capabilities so that GitHub can verify that commits made in the codespace come from a trusted source. When enabled, this setting will be applied to your list of trusted repositories.', 'Codespaces 可以具有 GPG 提交签名功能，以便 GitHub 可以验证在 codespace 中所做的提交来自受信任的来源。启用此设置后，它将应用于您的受信任存储库列表。'],
+  ['GPG signing will be available in Codespaces', 'GPG 签名将在 Codespaces 中可用'],
+  ['Settings Sync', '设置同步'],
+  ['By enabling, your codespaces will be able to pull from VS Code Settings Sync service and push only for the trusted repositories you specify. Only enable this for repositories that you trust.', '启用后，您的 codespaces 将能够从 VS Code 设置同步服务中拉取，并仅对您指定的受信任存储库进行推送。仅对您信任的存储库启用此功能。'],
+  ['VS Code Settings Sync will be available in Codespaces', 'VS Code 设置同步将在 Codespaces 中可用'],
+  ['Trusted repositories', '受信任的存储库'],
+  ['The following repositories will be referenced by GPG verification and Settings Sync.', '以下存储库将被 GPG 验证和设置同步引用。'],
+  ['GPG signing and VS Code Settings Sync will be available for codespaces for all repositories', 'GPG 签名和 VS Code 设置同步将为所有存储库的 codespaces 提供服务'],
+  ['Selected repositories', '选定的存储库'],
+  ['GPG signing and VS Code Settings Sync will be available for codespaces from the selected repositories', 'GPG 签名和 VS Code 设置同步将从选定的存储库提供 codespaces 服务'],
+  ['Select repository', '选择存储库'],
+  [/Selected (.+) repositories\./, '选定 $1 个存储库。'],
+  ['Submit', '提交'],
+  ['GPG and VS Code Settings Sync will be available for Codespaces from these repositories.', 'GPG 和 VS Code 设置同步将从这些存储库提供 Codespaces 服务。'],
+  ['Access and security', '访问和安全'],
+  ['Deprecated', '已弃用'],
+  ['Codespaces you create for your personal account can either be restricted to accessing the repository it was opened for, or granted read access to other repositories you own.', '您为个人帐户创建的 codespaces 可以被限制为仅访问它打开的存储库，或者被授予对您拥有的其他存储库的只读访问权限。'],
+  ['Limit access of personal Codespaces to the repository they were opened for', '限制个人 Codespaces 的访问权限以打开存储库'],
+  ['All Codespaces can access other repositories I own', '所有 Codespaces 都可以访问我拥有的其他存储库'],
+  ['Personal Codespaces created for specific repositories can access other repositories I own', '为特定存储库创建的个人 Codespaces 可以访问我拥有的其他存储库'],
+  ['Editor preference', '编辑器偏好'],
+  ['Connect to the cloud from your local desktop client. Requires', '从本地桌面客户端连接到云。需要'],
+  ['with the', '与'],
+  ['extension.', '扩展。'],
+  ['Edit and preview changes straight from the browser.', '直接从浏览器编辑和预览更改。'],
+  ['Visual Studio Code for the Web', 'Visual Studio Code在线版'],
+  ['Edit and run notebooks from the browser with JupyterLab.', '从浏览器编辑和运行笔记本电脑上，使用 JupyterLab。'],
+  ['Default idle timeout', '默认空闲超时'],
+  ['A codespace will suspend after a period of inactivity. You can specify a default idle timeout value, which will apply to all codespaces created after the default is changed. You will be charged for the entire time your codespace is running, even if it is idle. The maximum value is', '一个 codespace 将在一段时间不活动后暂停。您可以指定默认空闲超时值，该值将应用于所有在默认值更改后创建的 codespace。即使 codespace 处于空闲状态，您仍将为其运行的整个时间付费。最大值为'],
+  ['minutes (4 hours).', '分钟（4小时）。'],
+  ['minutes', '分钟'],
+  ['hours', '小时'],
+  ['days', '天'],
+  ['weeks', '周'],
+  ['months', '月'],
+  ['years', '年'],
+  ['Inactive codespaces are automatically deleted 30 days after the last time they were stopped. A shorter retention period can be set, and will apply to all codespaces created going forward. The default and maximum value is', '30 天后，最后一次停止 codespace 后，将自动删除不活动的 codespace。可以设置更短的保留期，并将应用于所有将来创建的 codespace。默认和最大值为'],
+  ['days.', '天。'],
+  ['Learn about retention setting', '了解保留设置'],
+  ['Host image version preference', '主机映像版本偏好'],
+  ['The host image defines the operating system in which development containers run. These images receive periodic upgrades for security, functionality, and performance. GitHub Codespaces offers early access to beta images to ensure compatibility with existing development container configurations. Any codespace created or resumed after changing this setting will use the specified image configuration.', '主机映像定义了开发容器在其中运行的操作系统。这些图像定期接收安全、功能和性能方面的升级。GitHub Codespaces 提供早期访问版本，以确保与现有开发容器配置的兼容性。在更改此设置后创建或恢复的任何 codespace 将使用指定的图像配置。'],
+  ['Learn more about host images', '了解有关主机映像的更多信息'],
+  ['Stable', '稳定版'],
+  ['Beta', '测试版'],
+
+
+  
+
+
 
   // 登录相关
   ['Sign in to GitHub', '登录到 Github'],
@@ -355,6 +1046,41 @@ const allData = [
   ['New to GitHub?', '刚来 Github？'],
   ['Create an account', '创建一个账户'],
   ['Forgot password?', '忘记密码？'],
+  ['Theme preferences', '主题偏好'],
+  ['Choose how GitHub looks to you. Select a single theme, or sync with your system and automatically switch between day and night themes. Selections are applied immediately and saved automatically.', '选择 GitHub 如何向你展示。选择一个单一的主题，或者与你的系统同步，并在白天和夜晚之间自动切换。选择将立即生效并自动保存。'],
+  ['Theme mode', '主题模式'],
+  ['Day', '白天'],
+  ['Night', '夜晚'],
+  ['Single theme', '单一主题'],
+  ['GitHub will use your selected theme', 'GitHub 将使用您选择的主题'],
+  ['Light default', '浅色默认'],
+  ['Dark default', '深色默认'],
+  ['Light high contrast', '浅色高对比度'],
+  ['Dark high contrast', '深色高对比度'],
+  ['Light Protanopia & Deuteranopia', '浅色色弱'],
+  ['Dark Protanopia & Deuteranopia', '深色色弱'],
+  ['Dark dimmed', '深暗模式'],
+  ['Light Tritanopia', '浅色色弱 II'],
+  ['Dark Tritanopia', '深色色弱 II'],
+  ['GitHub theme will match your system active settings', 'GitHub 主题将匹配您的系统活动设置'],
+  ['Day theme', '白天主题'],
+  ['Night theme', '夜晚主题'],
+  ['This theme will be active when your system is set to “light mode”', '当系统设置为“浅色模式”时，此主题将处于活动状态'],
+  ['This theme will be active when your system is set to “dark mode”', '当系统设置为“深色模式”时，此主题将处于活动状态'],
+  ['Sync with system', '同步系统'],
+  ['Active', '活动'],
+  ['Inactive', '非活动'],
+  ['Emoji skin tone preference', '表情符号肤色偏好'],
+  ['Preferred default emoji skin tone', '首选默认表情符号肤色'],
+  ['Tab size preference', '制表符大小偏好'],
+  ['Choose the number of spaces a tab is equal to when rendering code', '选择渲染代码时一个制表符等于多少个空格'],
+  ['8 (Default)', '8 (默认)'],
+  ['Markdown editor font preference', 'Markdown 编辑器字体偏好'],
+  ['Font preference for plain text editors that support Markdown styling (e.g. pull request and issue descriptions, comments.)', '支持 Markdown 样式的纯文本编辑器的字体偏好（例如拉取请求和问题描述、评论。）'],
+  ['Use a fixed-width (monospace) font when editing Markdown', '编辑 Markdown 时使用固定宽度（等宽）字体'],
+
+
+
 
   // 问题与合并请求相关
   ['Issues', '问题'],
@@ -441,6 +1167,8 @@ const allData = [
   ['Cancel', '取消'],
 
   // 项目相关
+  ['Search in this repository', '在这个仓库中搜索'],
+  ['Search in this owner', '在这个所有者中搜索'],
   ['Welcome to the all-new projects', '欢迎来到全新的项目'],
   ['No open projects', '没有开放的项目'],
   ['Add a bio', '添加个人简介'],
@@ -730,6 +1458,7 @@ const allData = [
   ['Commit changes...', '提交更改...'],
 
   // 其他
+  [/Start a new repository for (\w+)/, '为 $1 创建一个新仓库'],
   ['Actions', '动作'],
   ['Wiki', '维基'],
   ['Copilot', 'Copilot助手'],
@@ -871,108 +1600,162 @@ const allData = [
   ['Docs', '文档']
 ];
 
-const MutationObserverConfig = {
-  childList: true,
-  subtree: true,
-  attributeFilter: ["data-label"],
-  characterData: true,
-};
-
-const dataMap = new Map();
+const translationMap = new Map();
 allData.forEach(([key, val]) => {
-  if (key && !dataMap.has(key)) {
-    dataMap.set(key, val);
-  }
+    translationMap.set(key, val);
 });
+
+const MutationObserverConfig = {
+    childList: true,
+    subtree: true,
+    attributeFilter: ["data-label"],
+    characterData: true
+};
 
 // 缓存已经处理过的节点
 const processedNodes = new Set();
 
+// 定义可能包含需要替换文本的元素标签
+const targetTags = ['INPUT', 'TEXTAREA', 'BUTTON', 'LABEL', 'SPAN', 'P', 'H1', 'H2', 'H3', 'H4', 'H5', 'H6'];
+
 const observer = new MutationObserver(function (mutations) {
-  const treeWalker = document.createTreeWalker(
-    document.body,
-    NodeFilter.SHOW_ALL,
-    {
-      acceptNode: function (node) {
-        if (
-          node.nodeType === 3 ||
-          (node.hasAttribute &&
-            (node.hasAttribute("data-label") ||
-              node.hasAttribute("placeholder") ||
-              node.hasAttribute("value")))
-        ) {
-          return NodeFilter.FILTER_ACCEPT;
-        } else {
-          return NodeFilter.FILTER_SKIP;
-        }
-      },
-    },
-    false
-  );
+    const treeWalker = document.createTreeWalker(
+        document.body,
+        NodeFilter.SHOW_ALL,
+        {
+            acceptNode: function (node) {
+                if (
+                    node.nodeType === 3 ||
+                    (node.tagName && targetTags.includes(node.tagName) &&
+                        (node.hasAttribute("data-label") ||
+                            node.hasAttribute("placeholder") ||
+                            node.hasAttribute("value")))
+                ) {
+                    return NodeFilter.FILTER_ACCEPT;
+                } else {
+                    return NodeFilter.FILTER_SKIP;
+                }
+            }
+        },
+        false
+    );
 
-  const nodesToProcess = [];
-  let currentNode = treeWalker.currentNode;
-  while (currentNode) {
-    if (!processedNodes.has(currentNode)) {
-      nodesToProcess.push(currentNode);
-      processedNodes.add(currentNode);
+    const nodesToProcess = [];
+    let currentNode = treeWalker.currentNode;
+    while (currentNode) {
+        if (!processedNodes.has(currentNode)) {
+            nodesToProcess.push(currentNode);
+            processedNodes.add(currentNode);
+        }
+        currentNode = treeWalker.nextNode();
     }
-    currentNode = treeWalker.nextNode();
-  }
 
-  // 分批处理节点
-  function processNodesInBatch() {
-    // 如果待处理节点数组为空，则直接返回
-    if (nodesToProcess.length === 0) return;
+    // 分批处理节点
+    function processNodesInBatch() {
+        if (nodesToProcess.length === 0) return;
 
-    // 定义每批处理的节点数量
-    const batchSize = 10;
-    // 从待处理节点数组中取出前10个节点
-    const batch = nodesToProcess.splice(0, batchSize);
+        const batchSize = 10;
+        const batch = nodesToProcess.splice(0, batchSize);
 
-    // 遍历当前批次的每个节点
-    batch.forEach((node) => {
-      // 处理文本节点
-      if (node.nodeType === 3) {
-        // 获取节点文本内容，去除前后空白，并将连续多个空格替换为单个空格
-        let key1 = node.textContent
-          .replace(/^\s*|\s*$/g, "")
-          .replace(/\s+/g, " ");
-        // 如果翻译映射中存在对应的翻译，则替换节点内容
-        if (dataMap.has(key1)) node.textContent = dataMap.get(key1);
-      } 
-      // 处理元素节点
-      else {
-        // 处理data-label属性
-        let key2 = node.getAttribute("data-label");
-        if (key2 && dataMap.has(key2))
-          node.setAttribute("data-label", dataMap.get(key2));
-        
-        // 处理placeholder属性
-        let key3 = node.getAttribute("placeholder") || "";
-        if ((key3 = key3.trim())) {
-          if (dataMap.has(key3))
-            node.setAttribute("placeholder", dataMap.get(key3));
-        }
-        
-        // 处理INPUT元素的value属性
-        let key4 = node.getAttribute("value");
-        if (node.tagName == "INPUT" && dataMap.has(key4)) {
-          node.setAttribute("value", dataMap.get(key4));
-          // 处理INPUT元素的其他相关属性
-          let key5 = node.getAttribute("data-signin-label");
-          let key6 = node.getAttribute("data-disable-with");
-          node.setAttribute("data-signin-label", dataMap.get(key5));
-          node.setAttribute("data-disable-with", dataMap.get(key6));
-        }
-      }
-    });
+        batch.forEach((node) => {
+            if (node.nodeType === 3) {
+                let text = node.textContent
+                   .replace(/^\s*|\s*$/g, "")
+                   .replace(/\s+/g, " ");
 
-    // 使用requestIdleCallback在浏览器空闲时继续处理剩余的节点
+                translationMap.forEach((val, key) => {
+                    if (typeof key === 'string') {
+                        if (key === text) {
+                            node.textContent = val;
+                        }
+                    } else if (key instanceof RegExp) {
+                        if (key.test(text)) {
+                            node.textContent = text.replace(key, val);
+                        }
+                    }
+                });
+            } else {
+                let dataLabel = node.getAttribute("data-label");
+                if (dataLabel) {
+                    translationMap.forEach((val, key) => {
+                        if (typeof key === 'string') {
+                            if (key === dataLabel) {
+                                node.setAttribute("data-label", val);
+                            }
+                        } else if (key instanceof RegExp) {
+                            if (key.test(dataLabel)) {
+                                node.setAttribute("data-label", dataLabel.replace(key, val));
+                            }
+                        }
+                    });
+                }
+
+                let placeholder = node.getAttribute("placeholder") || "";
+                placeholder = placeholder.trim();
+                if (placeholder) {
+                    translationMap.forEach((val, key) => {
+                        if (typeof key === 'string') {
+                            if (key === placeholder) {
+                                node.setAttribute("placeholder", val);
+                            }
+                        } else if (key instanceof RegExp) {
+                            if (key.test(placeholder)) {
+                                node.setAttribute("placeholder", placeholder.replace(key, val));
+                            }
+                        }
+                    });
+                }
+
+                let value = node.getAttribute("value");
+                if (node.tagName === "INPUT" && value) {
+                    translationMap.forEach((val, key) => {
+                        if (typeof key === 'string') {
+                            if (key === value) {
+                                node.setAttribute("value", val);
+                            }
+                        } else if (key instanceof RegExp) {
+                            if (key.test(value)) {
+                                node.setAttribute("value", value.replace(key, val));
+                            }
+                        }
+                    });
+
+                    let signinLabel = node.getAttribute("data-signin-label");
+                    let disableWith = node.getAttribute("data-disable-with");
+                    if (signinLabel) {
+                        translationMap.forEach((val, key) => {
+                            if (typeof key === 'string') {
+                                if (key === signinLabel) {
+                                    node.setAttribute("data-signin-label", val);
+                                }
+                            } else if (key instanceof RegExp) {
+                                if (key.test(signinLabel)) {
+                                    node.setAttribute("data-signin-label", signinLabel.replace(key, val));
+                                }
+                            }
+                        });
+                    }
+                    if (disableWith) {
+                        translationMap.forEach((val, key) => {
+                            if (typeof key === 'string') {
+                                if (key === disableWith) {
+                                    node.setAttribute("data-disable-with", val);
+                                }
+                            } else if (key instanceof RegExp) {
+                                if (key.test(disableWith)) {
+                                    node.setAttribute("data-disable-with", disableWith.replace(key, val));
+                                }
+                            }
+                        });
+                    }
+                }
+            }
+        });
+
+        requestIdleCallback(processNodesInBatch);
+    }
+
     requestIdleCallback(processNodesInBatch);
-  }
-
-  requestIdleCallback(processNodesInBatch);
 });
 
 observer.observe(document.body, MutationObserverConfig);
